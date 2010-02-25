@@ -364,6 +364,14 @@ int c, to_utf, font;
 		  return (*p)[0] | (font << 8);
 	      }
 	}
+      if (c == 0x2010) return '-';
+      if (c == 0x2013) return '-';
+      if (c == 0x2014) return '-';
+      if (c == 0x2018) return '\'';
+      if (c == 0x2019) return '\'';
+      if (c == 0x201c) return '"';
+      if (c == 0x201d) return '"';
+      if (c == 0x2022) return '*';
       return '?';
     }
   if (c < 128 && (font & 128) != 0)
